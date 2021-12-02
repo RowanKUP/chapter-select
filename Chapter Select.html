@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter Select</title>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap');
+    * {
+        box-sizing: border-box;
+    }
+    html, body {
+        height: 100%;
+    }
+    html {
+        background: url("Dark Wallpaper.jpg") center;
+    }
+    body {
+        font-family: 'Almendra', serif;
+        background: #00000066;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        height: 50%;
+    }
+    .chapter {
+        width: 300px;
+        border: 1px solid black;
+        height: 100%;
+        background: transparent;
+        transition: .5s;
+        filter: grayscale(.8);
+    }
+    .chapter:hover {
+        transform: scale(1.1);
+        filter: none;
+        z-index: 10;
+    }
+    #art {
+        background: url("village.jpg") center/cover no-repeat;
+    }
+    #sva {
+        background: url("thalassa.jpg") center/cover no-repeat;
+    }
+    #greg {
+        background: url("evil-throne-better.jpg") center/cover no-repeat;
+    }
+    #cask {
+        background: url("azathoth.jpg") center/cover no-repeat;
+    }
+    #caskCh {
+        position: relative;
+        z-index: 0;
+    }
+    #caskCh:hover {
+        transform: none;
+        filter: grayscale(.8);
+    }
+    #caskCh:hover img {
+        opacity: 1;
+    }
+    #cask img {
+        width: 20%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity .5s;
+    }
+    .title, .name {
+        color: white;
+        text-align: center;
+        font-size: 1.2em;
+        z-index: 20;
+    }
+    h1 {
+        color: white;
+        text-align: center;
+    }
+    .backImg {
+        height: calc(100% - 3em);
+    }
+</style>
+</head>
+<body>
+    <h1>Select a Chapter:</h1>
+    <div class="container">
+        <div class="chapter">
+            <div class="name">Artoria Gardens in...</div>
+            <div class="backImg" id="art"></div>
+            <div class="title">Summer Getaway</div>
+        </div>
+        <div class="chapter" >
+            <div class="name">Svalm Pocketsands in...</div>
+            <div class="backImg" id="sva"></div>
+            <div class="title">"Life Could Be Marine..."</div>
+        </div>
+        <div class="chapter" >
+            <div class="name">Gregory Stonetomb in...</div>
+            <div class="backImg" id="greg"></div>
+            <div class="title">Gregory, the Great and Terrible</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="chapter" id="caskCh">
+            <div class="name">Cask of Ale in...</div>
+            <div class="backImg" id="cask">
+                <img src="padlock.png" />
+            </div>
+            <div class="title">Gazes Also Into You</div>
+        </div>
+    </div>
+<script>
+</script>
+</body>
+</html>
