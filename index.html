@@ -8,6 +8,7 @@
      @import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap');
     * {
         box-sizing: border-box;
+        user-select: none;
     }
     html, body {
         height: 100%;
@@ -121,6 +122,11 @@
         </div>
     </div>
 <script>
+    window.oncontextmenu = function(event) {
+     event.preventDefault();
+     event.stopPropagation();
+     return false;
+};
 </script>
 </body>
 </html>
