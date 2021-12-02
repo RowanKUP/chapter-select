@@ -9,6 +9,8 @@
     * {
         box-sizing: border-box;
         user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
     }
     html, body {
         height: 100%;
@@ -28,12 +30,10 @@
         width: 90%;
         margin: 0 auto;
         margin-bottom: 60px;
-        height: 50%;
     }
     .chapter {
         width: 300px;
         border: 1px solid black;
-        height: 100%;
         background: transparent;
         transition: .5s;
         filter: grayscale(.8);
@@ -89,7 +89,7 @@
         text-align: center;
     }
     .backImg {
-        height: calc(100% - 3em);
+        height: calc(50vh - 3em);
     }
 </style>
 </head>
